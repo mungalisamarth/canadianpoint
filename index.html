@@ -1,124 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Canadian Point | Global Industrial Materials</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Canadian Point connects Canadian manufacturers with reliable global industrial material suppliers. Spec-driven sourcing. Accountable delivery." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Canadian Point | Global Industrial Materials" />
+  <meta property="og:description" content="Canada-first sourcing. Global supply. One reliable point of contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://canadianpoint.ca" />
+  <meta property="og:image" content="https://canadianpoint.ca/assets/hero-industrial.jpg" />
+
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Canadian Point",
+    "url": "https://canadianpoint.ca",
+    "logo": "https://canadianpoint.ca/assets/logo.png",
+    "description": "Global industrial materials sourcing for Canadian manufacturers."
+  }
+  </script>
 </head>
+
 <body>
+  <!-- Top Nav -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Canadian Point home">
+        <img src="assets/logo.png" alt="Canadian Point" class="nav__logo" />
+        <span class="nav__wordmark">Canadian Point</span>
+      </a>
 
-<header class="hero">
-  <img src="assets/logo.png" alt="Canadian Point Logo" class="logo">
-  <h1>Canada-first sourcing. Global supply. One reliable point of contact.</h1>
-</header>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-<section class="section reveal">
-  <div class="content">
-    <h2>What We Do</h2>
-    <p>We help Canadian buyers source industrial raw materials and processed inputs with clarity, quality control, and reliable delivery.</p>
-    <ul>
-      <li>Sourcing & supplier qualification</li>
-      <li>Specs, sampling & documentation</li>
-      <li>Logistics coordination into Canada</li>
-    </ul>
-  </div>
-  <div class="image">
-    <img src="assets/hero-industrial.jpg" alt="Industrial materials">
-  </div>
-</section>
+      <div class="nav__links" data-nav-links>
+        <a href="#what">What</a>
+        <a href="#products">Products</a>
+        <a href="#process">Process</a>
+        <a href="#quality">Quality</a>
+        <a class="nav__cta" href="#contact">Request a Quote</a>
+      </div>
+    </div>
+  </nav>
 
-<section class="section alt reveal">
-  <div class="image">
-    <img src="assets/products.jpg" alt="Industrial mineral products">
-  </div>
-  <div class="content">
-    <h2>Product Categories</h2>
-    <ul>
-      <li>Talc – high whiteness grades</li>
-      <li>Soapstone / Steatite</li>
-      <li>Magnesite – processed grades</li>
-      <li>Custom mineral sourcing on request</li>
-    </ul>
-    <p class="note">We match to your required whiteness, mesh size, purity, and application.</p>
-  </div>
-</section>
+  <!-- Hero -->
+  <header id="top" class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
 
-<section class="section reveal">
-  <div class="content">
-    <h2>How It Works</h2>
-    <ol>
-      <li>You share specs</li>
-      <li>We propose options</li>
-      <li>Sampling & approval</li>
-      <li>Coordinated delivery</li>
-    </ol>
-  </div>
-  <div class="image">
-    <img src="assets/process.jpg" alt="Supply chain process">
-  </div>
-</section>
+    <div class="hero__inner">
+      <div class="hero__badge reveal" data-delay="0">
+        <span class="pill">GLOBAL INDUSTRIAL MATERIALS</span>
+      </div>
 
-<section class="section alt reveal">
-  <div class="image">
-    <img src="assets/quality.jpg" alt="Quality inspection">
-  </div>
-  <div class="content">
-    <h2>Quality & Documentation</h2>
-    <ul>
-      <li>Certificates of Analysis</li>
-      <li>Mesh & PSD customization</li>
-      <li>Whiteness targets</li>
-      <li>Traceable lot control</li>
-    </ul>
-  </div>
-</section>
+      <div class="hero__brand reveal" data-delay="60">
+        <img src="assets/logo.png" alt="Canadian Point Logo" class="hero__logo" />
+      </div>
 
-<section class="section reveal">
-  <div class="content full">
-    <h2>Why Canadian Point</h2>
-    <p>Direct. Spec-driven. Accountable. Built around Canadian buyer expectations.</p>
-  </div>
-  <div class="image">
-    <img src="assets/canada-map.jpg" alt="Canada map industrial trade">
-  </div>
-</section>
+      <h1 class="hero__headline reveal" data-delay="120">
+        Canada-first sourcing. Global supply.<br />
+        One reliable point of contact.
+      </h1>
 
-<section class="section contact reveal">
-  <div class="content full">
-    <h2>Request a Quote</h2>
-    <p>Tell us what you need and we will respond within 1–2 business days.</p>
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSelAZ7l7jrxu1nTk_JvK9haB8qoORRor1DTvgZ_XsMRnyZSWA/viewform?embedded=true" 
-      width="100%" 
-      height="900" 
-      frameborder="0" 
-      marginheight="0" 
-      marginwidth="0">
-      Loading…
-    </iframe>
-  </div>
-</section>
+      <p class="hero__subhead reveal" data-delay="180">
+        Spec-driven sourcing for industrial minerals and processed inputs, with documentation discipline and dependable delivery into Canada.
+      </p>
 
-<footer>
-  <p>© 2026 Canadian Point. All Rights Reserved.</p>
-</footer>
+      <div class="hero__actions reveal" data-delay="240">
+        <a class="btn btn--primary" href="#contact">Request a Quote</a>
+        <a class="btn btn--ghost" href="#products">View Product Categories</a>
+      </div>
 
-<script>
-  const reveals = document.querySelectorAll(".reveal");
+      <a class="hero__scroll reveal" data-delay="320" href="#what" aria-label="Scroll to next section">
+        <span>Scroll</span>
+        <span class="hero__arrow">↓</span>
+      </a>
+    </div>
+  </header>
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-      }
-    });
-  });
+  <!-- What -->
+  <section id="what" class="section">
+    <div class="container split">
+      <div class="copy reveal" data-delay="0">
+        <h2>What We Do</h2>
+        <p>
+          We help Canadian buyers source industrial raw materials and processed inputs with clarity, quality control, and reliable delivery.
+        </p>
+        <ul class="list">
+          <li>Sourcing and supplier qualification</li>
+          <li>Specs, sampling, and documentation</li>
+          <li>Logistics coordination into Canada</li>
+        </ul>
+      </div>
 
-  reveals.forEach(reveal => observer.observe(reveal));
-</script>
+      <div class="media reveal" data-delay="120">
+        <img src="assets/hero-industrial.jpg" alt="Industrial materials warehouse" loading="lazy" />
+      </div>
+    </div>
+  </section>
 
+  <!-- Products -->
+  <section id="products" class="section section--alt">
+    <div class="container split split--reverse">
+      <div class="copy reveal" data-delay="0">
+        <h2>Product Categories</h2>
+        <ul class="list">
+          <li>Talc – high whiteness grades</li>
+          <li>Soapstone / Steatite</li>
+          <li>Magnesite – processed grades</li>
+          <li>Custom mineral sourcing on request</li>
+        </ul>
+        <p class="note">We match to your required whiteness, mesh size, purity, and application.</p>
+      </div>
+
+      <div class="media reveal" data-delay="120">
+        <img src="assets/products.jpg" alt="Industrial mineral products" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="section">
+    <div class="container split">
+      <div class="copy reveal" data-delay="0">
+        <h2>How It Works</h2>
+        <ol class="steps">
+          <li><strong>You share specs.</strong> Whiteness, mesh size, application, delivery point.</li>
+          <li><strong>We propose options.</strong> Matched grades, lead times, and documentation.</li>
+          <li><strong>Sampling & approval.</strong> COA review and pre-shipment checks.</li>
+          <li><strong>Coordinated delivery.</strong> Reliable import and delivery into Canada.</li>
+        </ol>
+      </div>
+
+      <div class="media reveal" data-delay="120">
+        <img src="assets/process.jpg" alt="Supply chain process" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality -->
+  <section id="quality" class="section section--alt">
+    <div class="container split split--reverse">
+      <div class="copy reveal" data-delay="0">
+        <h2>Quality & Documentation</h2>
+        <ul class="list">
+          <li>Certificates of Analysis</li>
+          <li>Mesh and PSD customization</li>
+          <li>Whiteness and purity targets</li>
+          <li>Traceable lot discipline</li>
+        </ul>
+      </div>
+
+      <div class="media reveal" data-delay="120">
+        <img src="assets/quality.jpg" alt="Quality inspection" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Why -->
+  <section class="section">
+    <div class="container">
+      <div class="why reveal" data-delay="0">
+        <h2>Why Canadian Point</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Direct & accountable</h3>
+            <p>One point of contact from inquiry to delivery, with clear ownership.</p>
+          </div>
+          <div class="card">
+            <h3>Spec-driven sourcing</h3>
+            <p>We prioritize fit to spec: whiteness, mesh, application, documentation.</p>
+          </div>
+          <div class="card">
+            <h3>Built for Canadian buyers</h3>
+            <p>Documentation discipline and delivery coordination aligned to Canada-first needs.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="media reveal" data-delay="120">
+        <img src="assets/canada-map.jpg" alt="Canada trade map" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section--contact">
+    <div class="container">
+      <div class="contact reveal" data-delay="0">
+        <h2>Request a Quote</h2>
+        <p>Share your requirements and we will respond within 1–2 business days.</p>
+      </div>
+
+      <div class="form-shell reveal" data-delay="120">
+        <iframe
+          title="Canadian Point Contact Form"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSelAZ7l7jrxu1nTk_JvK9haB8qoORRor1DTvgZ_XsMRnyZSWA/viewform?embedded=true"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="y"></span> Canadian Point.</span>
+      <span class="footer__muted">Global Industrial Materials</span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const toggle = document.querySelector(".nav__toggle");
+    const links = document.querySelector("[data-nav-links]");
+    if (toggle && links) {
+      toggle.addEventListener("click", () => {
+        const open = links.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", String(open));
+      });
+
+      // close on click
+      links.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", () => {
+          links.classList.remove("is-open");
+          toggle.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+
+    // Reveal on scroll (staggered)
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const els = document.querySelectorAll(".reveal");
+
+    if (!prefersReduced) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const d = parseInt(el.getAttribute("data-delay") || "0", 10);
+            el.style.transitionDelay = (d / 1000) + "s";
+            el.classList.add("is-visible");
+            io.unobserve(el);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      els.forEach(el => io.observe(el));
+    } else {
+      els.forEach(el => el.classList.add("is-visible"));
+    }
+
+    // year
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
