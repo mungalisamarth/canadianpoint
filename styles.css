@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  line-height: 1.6;
+  background: #ffffff;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f8f8f8;
+}
+
+.logo {
+  max-width: 260px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  max-width: 600px;
+  margin: auto;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px;
+  align-items: center;
+  gap: 30px;
+}
+
+.section.alt {
+  background: #fafafa;
+}
+
+.content {
+  max-width: 500px;
+}
+
+.content.full {
+  max-width: 800px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.section ul,
+.section ol {
+  padding-left: 20px;
+}
+
+.note {
+  margin-top: 15px;
+  font-style: italic;
+  color: #666;
+}
+
+.image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+.contact iframe {
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Desktop Layout */
+@media(min-width: 768px) {
+  .section {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .section.alt {
+    flex-direction: row-reverse;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  .image {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+/* Scroll Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
