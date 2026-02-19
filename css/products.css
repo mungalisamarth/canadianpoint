@@ -1,378 +1,274 @@
-/* css/products.css */
+/* /css/products.css
+   Page-specific styling for Products page.
+   Designed to MATCH /css/styles.css (light theme, red CTA, clean cards).
+*/
 
-/* ---------
-  Base
---------- */
-/* :root{
-  --bg: #0b0f0e;
-  --surface: #0f1413;
-  --card: #121917;
-  --text: #e7ecea;
-  --muted: #b7c2be;
-  --line: rgba(231, 236, 234, 0.12);
-  --accent: #2f6b55;   /* Canadian Point green */
-  --accent2: #3a8468;
-  --shadow: 0 10px 30px rgba(0,0,0,.35);
-  --radius: 16px;
-} 
-/*
-*{ box-sizing: border-box; }
-html,body{ margin:0; padding:0; }
-body{
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background: radial-gradient(1200px 700px at 20% 0%, rgba(47,107,85,.25), transparent 50%),
-              radial-gradient(900px 600px at 80% 20%, rgba(58,132,104,.18), transparent 55%),
-              var(--bg);
-  color: var(--text);
-  line-height: 1.55;
-}
+/* -------------------------------------------------
+   Scope: do NOT override global body/nav/footer styles
+-------------------------------------------------- */
 
-a{ color: inherit; text-decoration: none; }
-a:hover{ text-decoration: none; }
+.products-page .hero__inner { max-width: 980px; }
 
-.container{
-  width: min(1100px, 92vw);
-  margin: 0 auto;
-}
-
-/* ---------
-  Header / Nav (safe default; replace if you already have a global nav)
---------- */
-/* .site-header{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(11,15,14,.72);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
-}
-.nav-wrap{
+/* Small pill row under hero actions */
+.products-page .badge-row{
   display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding: 14px 0;
-}
-.brand{
-  display:flex;
-  align-items:center;
-  gap: 10px;
-  font-weight: 700;
-  letter-spacing: .2px;
-}
-.brand-mark{
-  width: 12px;
-  height: 12px;
-  border-radius: 4px;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  box-shadow: 0 0 0 4px rgba(47,107,85,.18);
-}
-.brand-text{ font-size: 16px; }
-
-.nav{
-  display:flex;
-  gap: 18px;
-  align-items:center;
-}
-.nav a{
-  color: var(--muted);
-  font-weight: 600;
-  font-size: 14px;
-  padding: 8px 10px;
-  border-radius: 10px;
-}
-.nav a:hover{
-  color: var(--text);
-  background: rgba(231,236,234,.06);
-}
-.nav a.active{
-  color: var(--text);
-  background: rgba(47,107,85,.18);
-  border: 1px solid rgba(47,107,85,.35);
-}
-
-/* ---------
-  Hero
---------- */
-.hero{
-  padding: 56px 0 22px;
-}
-.eyebrow{
-  color: var(--muted);
-  font-weight: 700;
-  letter-spacing: .6px;
-  text-transform: uppercase;
-  font-size: 12px;
-  margin: 0 0 10px;
-}
-.hero h1{
-  font-size: clamp(30px, 4vw, 44px);
-  line-height: 1.15;
-  margin: 0 0 12px;
-}
-.subhead{
-  color: var(--muted);
-  font-size: 16px;
-  max-width: 72ch;
-  margin: 0 0 18px;
-}
-
-.hero-actions{
-  display:flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin: 18px 0 18px;
-}
-
-.badges{
-  display:flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.badge{
-  font-size: 12px;
-  font-weight: 700;
-  color: rgba(231,236,234,.92);
-  padding: 7px 10px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: rgba(18,25,23,.55);
-}
-
-/* ---------
-  Buttons
---------- */
-.btn{
-  display:inline-flex;
-  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
   justify-content:center;
-  border-radius: 12px;
-  padding: 10px 14px;
-  font-weight: 800;
-  font-size: 14px;
-  border: 1px solid transparent;
-  transition: transform .08s ease, background .2s ease, border-color .2s ease;
-}
-.btn:hover{ transform: translateY(-1px); }
-.btn:active{ transform: translateY(0px); }
-.btn.small{ padding: 9px 12px; font-size: 13px; }
-
-.btn.primary{
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  color: #06110d;
-  border-color: rgba(255,255,255,.08);
-}
-.btn.ghost{
-  background: rgba(231,236,234,.06);
-  border-color: var(--line);
-  color: var(--text);
+  margin-top: 14px;
 }
 
-/* ---------
-  Section
---------- */
-.section{
-  padding: 28px 0 56px;
+/* Use existing .pill styling but make it slightly tighter for multiple badges */
+.products-page .badge-row .pill{
+  letter-spacing: 0.06em;
+  font-size: 0.78rem;
 }
-.section-title{
-  font-size: 22px;
-  margin: 0 0 8px;
-}
-.section-intro{
+
+/* -------------------------------------------------
+   Products section intro
+-------------------------------------------------- */
+.products-page .section .section__intro{
   color: var(--muted);
-  margin: 0 0 18px;
-  max-width: 85ch;
+  max-width: 880px;
 }
 
-/* ---------
-  Product cards
---------- */
-.product-stack{
-  display:flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.product-card{
-  background: linear-gradient(180deg, rgba(18,25,23,.95), rgba(15,20,19,.95));
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-
-.product-head{
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap: 12px;
-  padding: 18px 18px 14px;
-  border-bottom: 1px solid var(--line);
-  background: rgba(18,25,23,.65);
-}
-.product-head h3{
-  margin: 0 0 6px;
-  font-size: 18px;
-}
-.product-tag{
-  margin: 0;
-  color: var(--muted);
-  font-weight: 700;
-  font-size: 13px;
-}
-
-.product-body{
-  padding: 16px 18px 18px;
-}
-.product-summary p{
-  margin: 0 0 12px;
-  color: rgba(231,236,234,.92);
-}
-.bullets{
-  margin: 0;
-  padding-left: 18px;
-  color: var(--muted);
-}
-.bullets li{ margin: 6px 0; }
-
-.spec-grid{
+/* -------------------------------------------------
+   Product Stack (two SKUs)
+-------------------------------------------------- */
+.products-page .product-stack{
   display:grid;
   grid-template-columns: 1fr;
   gap: 14px;
   margin-top: 16px;
 }
 
-@media (min-width: 860px){
-  .spec-grid{
-    grid-template-columns: 1.1fr 1.1fr .9fr;
-    align-items: start;
-  }
-}
-
-.spec-block{
+/* SKU card uses the same visual language as .card but with a richer header */
+.products-page .sku-card{
+  background:#fff;
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  overflow:hidden;
+}
+
+/* Header */
+.products-page .sku-card__head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 12px;
+  padding: 16px 16px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(to bottom, #ffffff, #fbfbfb);
+}
+
+.products-page .sku-card__title{
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+
+.products-page .sku-card__tag{
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* Ensure CTA button in header aligns with site buttons */
+.products-page .sku-card__cta{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* Body */
+.products-page .sku-card__body{
+  padding: 14px 16px 16px;
+}
+
+.products-page .sku-card__desc{
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.products-page .sku-card__bullets{
+  padding-left: 18px;
+  margin-bottom: 14px;
+}
+.products-page .sku-card__bullets li{
+  margin: 8px 0;
+  color: var(--muted);
+}
+.products-page .sku-card__bullets strong{
+  color: var(--text);
+}
+
+/* -------------------------------------------------
+   Specs Grid (tables + packaging)
+-------------------------------------------------- */
+.products-page .spec-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.products-page .spec-block{
+  background:#fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   padding: 14px;
-  background: rgba(11,15,14,.35);
-}
-.spec-block h4{
-  margin: 0 0 10px;
-  font-size: 14px;
-  letter-spacing: .2px;
 }
 
-.table-wrap{ overflow:auto; }
-.spec-table{
-  width: 100%;
+.products-page .spec-block h4{
+  font-size: 0.98rem;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+  position: relative;
+  padding-bottom: 8px;
+}
+.products-page .spec-block h4:after{
+  content:"";
+  display:block;
+  width: 34px;
+  height: 3px;
+  background: var(--brand);
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+/* Table */
+.products-page .spec-table{
+  width:100%;
   border-collapse: collapse;
-  min-width: 320px;
+  font-size: 0.95rem;
 }
-.spec-table th,
-.spec-table td{
-  text-align: left;
+
+.products-page .spec-table th,
+.products-page .spec-table td{
+  text-align:left;
   padding: 10px 8px;
-  border-bottom: 1px solid rgba(231,236,234,.10);
-  font-size: 13px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
 }
-.spec-table th{
-  color: rgba(231,236,234,.88);
-  font-weight: 800;
-  width: 55%;
+
+.products-page .spec-table th{
+  width: 56%;
+  color: #2b2b2b;
+  font-weight: 600;
 }
-.spec-table td{
+
+.products-page .spec-table td{
   color: var(--muted);
-  font-weight: 700;
 }
 
-.spec-list{
-  margin: 0;
-  padding-left: 16px;
+/* Packaging list */
+.products-page .spec-list{
+  padding-left: 18px;
+}
+.products-page .spec-list li{
+  margin: 8px 0;
   color: var(--muted);
-  font-size: 13px;
 }
-.spec-list li{ margin: 6px 0; }
-
-.note{
-  margin: 10px 0 0;
-  color: rgba(183,194,190,.95);
-  font-size: 12.5px;
-  border-left: 3px solid rgba(47,107,85,.55);
-  padding-left: 10px;
+.products-page .spec-list strong{
+  color: var(--text);
 }
 
-/* ---------
-  Footer area of product
---------- */
-.product-foot{
+/* Note callout matches global look */
+.products-page .spec-note{
+  margin-top: 10px;
+  color: var(--muted);
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+/* -------------------------------------------------
+   SKU Footer row (applications chips + link)
+-------------------------------------------------- */
+.products-page .sku-card__foot{
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap: 10px;
   flex-wrap: wrap;
-  padding: 14px 18px 16px;
+  padding: 14px 16px;
   border-top: 1px solid var(--line);
-  background: rgba(18,25,23,.55);
+  background: #fff;
 }
-.pill-row{
+
+.products-page .chip-row{
   display:flex;
-  gap: 8px;
   flex-wrap: wrap;
+  gap: 8px;
 }
-.pill{
-  font-size: 12px;
-  font-weight: 800;
-  color: rgba(231,236,234,.92);
-  padding: 6px 10px;
+
+/* Chips styled like lightweight pills */
+.products-page .chip{
+  display:inline-block;
+  padding: 7px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(231,236,234,.14);
-  background: rgba(231,236,234,.06);
-}
-
-.link{
-  font-weight: 900;
-  color: rgba(189, 233, 217, .92);
-}
-.link:hover{ text-decoration: underline; }
-
-/* ---------
-  Trust box
---------- */
-.trust-box{
-  margin-top: 18px;
-  border-radius: var(--radius);
+  background: #fff;
   border: 1px solid var(--line);
-  background: rgba(15,20,19,.75);
-  padding: 18px;
+  color: #444;
+  font-size: 0.86rem;
 }
-.trust-box h3{
-  margin: 0 0 8px;
-  font-size: 16px;
+
+.products-page .sku-link{
+  color: var(--brand);
+  font-weight: 600;
 }
-.trust-box ul{
-  margin: 0 0 14px;
-  padding-left: 18px;
+.products-page .sku-link:hover{
+  text-decoration: underline;
+}
+
+/* -------------------------------------------------
+   Quality & Compliance box (matches cards)
+-------------------------------------------------- */
+.products-page .trust-box{
+  margin-top: 14px;
+  background:#fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+.products-page .trust-box p,
+.products-page .trust-box li{
   color: var(--muted);
 }
-.trust-actions{
+
+.products-page .trust-actions{
   display:flex;
+  flex-wrap:wrap;
   gap: 10px;
-  flex-wrap: wrap;
+  margin-top: 12px;
 }
 
-/* ---------
-  Site footer
---------- */
-.site-footer{
-  border-top: 1px solid var(--line);
-  padding: 22px 0 28px;
-  background: rgba(11,15,14,.55);
+/* -------------------------------------------------
+   Responsive tweaks
+-------------------------------------------------- */
+@media (min-width: 820px){
+  /* Keep cards full width but make the spec grid 3 columns like your desktop style */
+  .products-page .spec-grid{
+    grid-template-columns: 1.1fr 1.1fr 0.9fr;
+    align-items:start;
+  }
+
+  /* Slightly more breathing room on desktop */
+  .products-page .sku-card__head,
+  .products-page .sku-card__body,
+  .products-page .sku-card__foot,
+  .products-page .trust-box{
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
-.footer-wrap{
-  display:flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.fineprint{
-  margin: 0;
-  color: rgba(183,194,190,.9);
-  font-size: 12.5px;
+
+/* -------------------------------------------------
+   Utility: Ensure anchor jump isn't hidden under sticky nav
+-------------------------------------------------- */
+.products-page [id]{
+  scroll-margin-top: 86px;
 }
