@@ -25,11 +25,28 @@
         <span class="brand-text">Canadian Point</span>
       </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="./index.html">Home</a>
-        <a class="active" href="./products.html" aria-current="page">Products</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
+    <!-- Nav (links back to your one page sections) -->
+  <nav class="nav">
+    <div class="nav__inner container">
+      <a class="nav__brand" href="/#top" aria-label="Canadian Point home">
+        <img src="/assets/favicon.png" alt="Canadian Point" class="nav__logo" width="34" height="34" />
+        <span class="nav__wordmark">Canadian Point</span>
+      </a>
+
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav__links" data-nav-links>
+        <a href="/#what">What</a>
+        <a href="/products.html">Products</a>
+        <a href="/#process">Process</a>
+        <a href="/#quality">Quality</a>
+        <a href="/faq.html" aria-current="page" class="is-active">FAQ</a>
+        <a class="nav__cta" href="/#contact">Request a Quote</a>
+      </div>
+    </div>
+  </nav>
     </div>
   </header>
 
