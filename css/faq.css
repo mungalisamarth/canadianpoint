@@ -1,0 +1,99 @@
+/* FAQ page additions. Uses your existing styles.css for nav, buttons, typography. */
+
+.faq-hero{
+  padding: 88px 0 34px;
+  background:
+    radial-gradient(900px 380px at 50% 0%, rgba(216,35,42,0.10), transparent 70%),
+    linear-gradient(to bottom, #fbfbfb, #ffffff);
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-kicker{
+  display:inline-block;
+  padding:7px 10px;
+  border-radius:999px;
+  background:#fff;
+  border:1px solid var(--line);
+  color:#444;
+  font-size:0.78rem;
+  letter-spacing:0.12em;
+  margin-bottom: 12px;
+}
+
+.faq-hero h1{
+  font-size: clamp(1.65rem, 3.2vw, 2.4rem);
+  letter-spacing:-0.02em;
+  line-height:1.2;
+  margin: 0 0 10px;
+}
+
+.faq-sub{
+  color: var(--muted);
+  max-width: 860px;
+  margin: 0 0 16px;
+  font-size: 1.02rem;
+}
+
+.faq-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.faq-wrap{
+  background: var(--bg);
+}
+
+.faq-section{
+  padding: 34px 0 80px;
+}
+
+.faq-section h2{
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  letter-spacing:-0.02em;
+  margin-bottom: 14px;
+}
+
+.faq-item{
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 6px 14px;
+  margin: 12px 0;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+.faq-item summary{
+  cursor:pointer;
+  list-style:none;
+  font-weight:700;
+  padding: 12px 2px;
+}
+
+.faq-item summary::-webkit-details-marker{
+  display:none;
+}
+
+.faq-body{
+  padding: 0 2px 14px;
+  color: var(--muted);
+}
+
+.faq-body p{
+  margin-top: 6px;
+}
+
+.faq-back{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top: 18px;
+}
+
+.nav__links a.is-active{
+  background:#f3f3f3;
+}
+
+@media (max-width: 640px){
+  .faq-hero{ padding: 76px 0 28px; }
+}
