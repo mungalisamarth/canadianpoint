@@ -3,7 +3,7 @@
 /* ---------
   Base
 --------- */
-:root{
+/* :root{
   --bg: #0b0f0e;
   --surface: #0f1413;
   --card: #121917;
@@ -14,8 +14,8 @@
   --accent2: #3a8468;
   --shadow: 0 10px 30px rgba(0,0,0,.35);
   --radius: 16px;
-}
-
+} 
+/*
 *{ box-sizing: border-box; }
 html,body{ margin:0; padding:0; }
 body{
@@ -38,7 +38,7 @@ a:hover{ text-decoration: none; }
 /* ---------
   Header / Nav (safe default; replace if you already have a global nav)
 --------- */
-.site-header{
+/* .site-header{
   position: sticky;
   top: 0;
   z-index: 50;
