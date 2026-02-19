@@ -1,86 +1,80 @@
 /* /css/products.css
-   Page-specific styling for Products page.
-   Designed to MATCH /css/styles.css (light theme, red CTA, clean cards).
+   Products page layout polish that matches /css/styles.css
 */
 
-/* -------------------------------------------------
-   Scope: do NOT override global body/nav/footer styles
--------------------------------------------------- */
+/* Highlight active nav item */
+.products-page .nav__links a[aria-current="page"]{
+  background: #f3f3f3;
+}
 
-.products-page .hero__inner { max-width: 980px; }
-
-/* Small pill row under hero actions */
+/* Hero badge pills row */
 .products-page .badge-row{
   display:flex;
   flex-wrap:wrap;
-  gap:10px;
   justify-content:center;
+  gap:10px;
   margin-top: 14px;
 }
 
-/* Use existing .pill styling but make it slightly tighter for multiple badges */
-.products-page .badge-row .pill{
-  letter-spacing: 0.06em;
-  font-size: 0.78rem;
+/* Keep intro copy width pleasant */
+.products-page .section__intro{
+  max-width: 900px;
 }
 
-/* -------------------------------------------------
-   Products section intro
--------------------------------------------------- */
-.products-page .section .section__intro{
-  color: var(--muted);
-  max-width: 880px;
-}
-
-/* -------------------------------------------------
-   Product Stack (two SKUs)
--------------------------------------------------- */
+/* SKU bands (adds separation between the two SKU blocks) */
 .products-page .product-stack{
   display:grid;
-  grid-template-columns: 1fr;
   gap: 14px;
-  margin-top: 16px;
+  margin-top: 18px;
 }
 
-/* SKU card uses the same visual language as .card but with a richer header */
+.products-page .sku-band{
+  padding: 16px;
+  border-radius: var(--radius);
+}
+
+.products-page .sku-band--alt{
+  background: var(--bg2);
+  border: 1px solid var(--line);
+}
+
+/* SKU card */
 .products-page .sku-card{
   background:#fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
   overflow:hidden;
 }
 
-/* Header */
 .products-page .sku-card__head{
   display:flex;
-  align-items:flex-start;
   justify-content:space-between;
+  align-items:flex-start;
   gap: 12px;
   padding: 16px 16px;
   border-bottom: 1px solid var(--line);
   background: linear-gradient(to bottom, #ffffff, #fbfbfb);
 }
 
+.products-page .sku-card__kicker{
+  display:inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  color: #555;
+  margin-bottom: 6px;
+}
+
 .products-page .sku-card__title{
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
   margin-bottom: 4px;
 }
 
 .products-page .sku-card__tag{
   color: var(--muted);
-  font-size: 0.92rem;
 }
 
-/* Ensure CTA button in header aligns with site buttons */
-.products-page .sku-card__cta{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-/* Body */
 .products-page .sku-card__body{
   padding: 14px 16px 16px;
 }
@@ -88,23 +82,24 @@
 .products-page .sku-card__desc{
   color: var(--muted);
   margin-bottom: 12px;
+  max-width: 1000px;
 }
 
 .products-page .sku-card__bullets{
   padding-left: 18px;
-  margin-bottom: 14px;
+  margin: 10px 0 16px;
 }
+
 .products-page .sku-card__bullets li{
   margin: 8px 0;
   color: var(--muted);
 }
+
 .products-page .sku-card__bullets strong{
   color: var(--text);
 }
 
-/* -------------------------------------------------
-   Specs Grid (tables + packaging)
--------------------------------------------------- */
+/* Specs grid */
 .products-page .spec-grid{
   display:grid;
   grid-template-columns: 1fr;
@@ -120,23 +115,21 @@
 }
 
 .products-page .spec-block h4{
-  font-size: 0.98rem;
+  font-size: 1.02rem;
   margin-bottom: 10px;
-  letter-spacing: -0.01em;
-  position: relative;
-  padding-bottom: 8px;
 }
+
 .products-page .spec-block h4:after{
   content:"";
   display:block;
-  width: 34px;
-  height: 3px;
+  width:34px;
+  height:3px;
   background: var(--brand);
-  border-radius: 2px;
-  margin-top: 8px;
+  border-radius:2px;
+  margin-top: 10px;
 }
 
-/* Table */
+/* Tables */
 .products-page .spec-table{
   width:100%;
   border-collapse: collapse;
@@ -153,8 +146,8 @@
 
 .products-page .spec-table th{
   width: 56%;
-  color: #2b2b2b;
   font-weight: 600;
+  color: #2b2b2b;
 }
 
 .products-page .spec-table td{
@@ -165,36 +158,36 @@
 .products-page .spec-list{
   padding-left: 18px;
 }
+
 .products-page .spec-list li{
   margin: 8px 0;
   color: var(--muted);
 }
+
 .products-page .spec-list strong{
   color: var(--text);
 }
 
-/* Note callout matches global look */
+/* Tip callout */
 .products-page .spec-note{
-  margin-top: 10px;
-  color: var(--muted);
+  margin-top: 12px;
+  padding: 12px 12px;
+  border-radius: 12px;
   background: var(--bg2);
   border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 10px 12px;
+  color: var(--muted);
 }
 
-/* -------------------------------------------------
-   SKU Footer row (applications chips + link)
--------------------------------------------------- */
+/* Footer row under each SKU */
 .products-page .sku-card__foot{
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   gap: 10px;
   flex-wrap: wrap;
-  padding: 14px 16px;
+  margin-top: 14px;
+  padding-top: 12px;
   border-top: 1px solid var(--line);
-  background: #fff;
 }
 
 .products-page .chip-row{
@@ -203,72 +196,65 @@
   gap: 8px;
 }
 
-/* Chips styled like lightweight pills */
 .products-page .chip{
   display:inline-block;
-  padding: 7px 10px;
-  border-radius: 999px;
-  background: #fff;
-  border: 1px solid var(--line);
-  color: #444;
-  font-size: 0.86rem;
+  padding:7px 10px;
+  border-radius:999px;
+  background:#fff;
+  border:1px solid var(--line);
+  color:#444;
+  font-size:0.86rem;
 }
 
 .products-page .sku-link{
   color: var(--brand);
   font-weight: 600;
 }
+
 .products-page .sku-link:hover{
   text-decoration: underline;
 }
 
-/* -------------------------------------------------
-   Quality & Compliance box (matches cards)
--------------------------------------------------- */
+/* Trust box */
 .products-page .trust-box{
-  margin-top: 14px;
+  margin-top: 18px;
   background:#fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 16px 16px;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  padding: 16px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
 }
 
-.products-page .trust-box p,
-.products-page .trust-box li{
+.products-page .trust-title{
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.products-page .trust-list{
+  padding-left: 18px;
   color: var(--muted);
+}
+
+.products-page .trust-list li{
+  margin: 8px 0;
 }
 
 .products-page .trust-actions{
   display:flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 12px;
 }
 
-/* -------------------------------------------------
-   Responsive tweaks
--------------------------------------------------- */
+/* Desktop */
 @media (min-width: 820px){
-  /* Keep cards full width but make the spec grid 3 columns like your desktop style */
   .products-page .spec-grid{
     grid-template-columns: 1.1fr 1.1fr 0.9fr;
     align-items:start;
   }
-
-  /* Slightly more breathing room on desktop */
-  .products-page .sku-card__head,
-  .products-page .sku-card__body,
-  .products-page .sku-card__foot,
-  .products-page .trust-box{
-    padding-left: 18px;
-    padding-right: 18px;
-  }
 }
 
-/* -------------------------------------------------
-   Utility: Ensure anchor jump isn't hidden under sticky nav
--------------------------------------------------- */
+/* Anchor jump offset under sticky nav */
 .products-page [id]{
   scroll-margin-top: 86px;
 }
